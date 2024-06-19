@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/',()=>{return "SERVIDOR CORRIENDO";});
+app.get('/',()=>{return "SERVIDOR CORRIENDO";});
 app.use('/summarize', summarizeRoutes);
 app.use('/register', registerRoutes);
 app.use('/tips', tipsRoutes);
